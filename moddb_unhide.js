@@ -3,16 +3,13 @@
 // @namespace    http://tampermonkey.net/
 // @version      0.1
 // @description  try to take over the world!
-// @author       You
-// @match        https://www.moddb.com/*
+// @author       Clement Julia
+// @match        https://www.moddb.com/mods/edain-mod
 // @grant        none
-// @require http://code.jquery.com/jquery-latest.js
+// @require      http://code.jquery.com/jquery-3.4.1.min.js
 // ==/UserScript==
 
 (function() {
     'use strict';
-    var bad_karma = document.querySelectorAll('[title="Bad karma"]');
-    for(var count = 0; count < bad_karma.length; count++) {
-       bad_karma[count].style.display = "inline";
-    };
+    $('.karmabadicon').css('display', 'block')
 })();
